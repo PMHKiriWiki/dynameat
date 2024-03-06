@@ -31,6 +31,10 @@ def _remove_empty_columns(matrix):
 
 def detect_asteroid(matrix_string, matrix_width, matrix_height):
     matrix = _convert_string_to_matrix(matrix_string, matrix_height, matrix_width)
+    
+    if not matrix or not any(matrix):
+        return None
+    
     filtered_rows_matrix = _remove_empty_rows(matrix)
     asteroid_matrix = _remove_empty_columns(filtered_rows_matrix)
     height, width = _get_matrix_dimensions(asteroid_matrix)
