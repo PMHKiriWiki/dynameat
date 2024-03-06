@@ -1,0 +1,3 @@
+from .asteroid import AsteroidSerializer
+
+

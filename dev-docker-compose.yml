@@ -1,0 +1,26 @@
+version: "2"
+services:
+  db:
+    container_name: ${COMPOSE_PROJECT_NAME}_postgres
+    image: postgres:14.2
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    volumes:
+      - vol_postgres:/var/lib/postgresql/data
+    ports:
+      - "16002:5432"
+  back:
+    volumes:
+      - vol_media:/media
+    depends_on:
+      - 'db'
+  nginx:
+    volumes:
+      - vol_media:/media
+
+volumes:
+  vol_postgres:
+    driver: local
+  vol_media:
+    driver: local

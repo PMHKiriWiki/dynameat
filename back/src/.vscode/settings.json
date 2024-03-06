@@ -1,0 +1,24 @@
+{
+    "python.pythonPath": "usr/bin/python",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./_setup",
+        "-p",
+        "*_test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.linting.pylintPath": "${workspaceFolder}/api/venv/bin/pylint",
+    "python.testing.unittestEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintUseMinimalCheckers": false,
+    "python.linting.pylintArgs": [
+        "--django-settings-module=_setup.settings",
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "compilerOptions": {
+        "baseUrl": "./src"
+      }
+}

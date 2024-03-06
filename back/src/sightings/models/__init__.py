@@ -1,0 +1,1 @@
+from .sighting import Sighting

@@ -1,0 +1,45 @@
+version: "2"
+services:
+  back:
+    container_name: ${COMPOSE_PROJECT_NAME}_django
+    build: ./back
+    environment:
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    restart: always
+    command: /start-django
+    volumes:
+      - ./back/src:/src
+      - vol_static:/static
+    expose:
+      - "8000"
+  front:
+    container_name: ${COMPOSE_PROJECT_NAME}_vue
+    build:
+      context: .
+      dockerfile: front/Dockerfile
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./front:/app
+
+  nginx:
+    container_name: ${COMPOSE_PROJECT_NAME}_nginx
+    image: nginx:1.21.6
+    restart: always
+    ports:
+      - "${NGINX_EXTERNAL_PORT}:8000"
+      # - "443:443"
+    volumes:
+      - ./back/src:/src
+      - ./nginx:/etc/nginx/conf.d
+      - vol_static:/static
+      - vol_validation:/.well-known/pki-validation
+    depends_on:
+      - 'back'
+
+volumes:
+  vol_static:
+    driver: local
+  vol_validation:
+    driver: local

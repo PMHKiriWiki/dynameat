@@ -1,0 +1,2 @@
+from .sighting import SightingFactory
+

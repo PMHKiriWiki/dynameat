@@ -1,0 +1,2 @@
+from .asteroid import AsteroidFactory
+
