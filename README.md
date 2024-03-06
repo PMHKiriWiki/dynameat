@@ -6,5 +6,5 @@
 5. Al inicio tendremos cargados unos Observtories y Devices por defecto. Serán lo que aparecen en el fichero de avistamientos. Esto se carga a través de fixtures.
 6. Si no se quiere ver el admin, acceder directamente a localhost:8000/docs y se abrirá Swagger con las endpoints definidos. Se ha hecho un ejemplo sencillo de algunos de los enpodints mas relevantes como el de consulta de asteroides o el de carga de el fichero csv.
 7. Para la prueba del endpoint /sightings/upload_file se extrae el fichero de una carpeta del proyecto ya que por limitaciones de tiempo no se ha realizado la integración con el front.
-8. Al llamar a este endpoint se podra consultar la api de asteroides para ver que se ha cargado correctamente.
+8. Al llamar a este endpoint se podra consultar la api de asteroides para ver que se ha cargado correctamente. Desde el admin de Sighting se pueden realizar filtrados de la información como se haría en el front, mediante el observatorio, o el dispositivo.
 9. Para ejecutar los tests usar el comando make run-tests que se encuentra en el Makefile. **Hay que encontrarse en la raiz del proyecto para que funcionen los comando de make**
