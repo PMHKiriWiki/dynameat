@@ -4,14 +4,6 @@ export
 export DEBUG =
 MANAGE_CMD = python manage.py
 
-SCRIPTS_DIR := scripts
-FILL_SCRIPT := $(SCRIPTS_DIR)/fill_database.py
-
-.PHONY: fill_database
-
-fill-database:
-	docker exec -it ${COMPOSE_PROJECT_NAME}_django ${MANAGE_CMD} fill_database
-
 up:
 	docker compose ${COMPOSE_FILES} up --build -d
 

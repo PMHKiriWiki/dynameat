@@ -1,0 +1,104 @@
+[
+    {
+        "model": "devices.device",
+        "pk": "b0a6c975-2d71-4e19-bfa3-9a4773e1f987",
+        "fields": {
+            "name": "Device_1",
+            "r_height": 3,
+            "r_width": 6,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "devices.device",
+        "pk": "ef228ca2-bce4-4ed9-8a92-3e98441f7e11",
+        "fields": {
+            "name": "Device_2",
+            "r_height": 4,
+            "r_width": 3,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "36c28922-bafe-41a8-8f3e-2f9c1c5c8f0a",
+        "fields": {
+            "name": "Device_3",
+            "r_height": 5,
+            "r_width": 4,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "ce593fa2-607b-4cf4-846e-98d1a1f5bc45",
+        "fields": {
+            "name": "Device_4",
+            "r_height": 4,
+            "r_width": 6,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "d4cc4019-6058-4a69-84ef-810e77f7eb36",
+        "fields": {
+            "name": "Device_5",
+            "r_height": 6,
+            "r_width": 6,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "33c1b7e3-943d-41b4-aaec-92a3b0f64ef8",
+        "fields": {
+            "name": "Device_6",
+            "r_height": 7,
+            "r_width": 3,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "a4f86035-d7a1-4b1f-b558-4ec1f916f4ad",
+        "fields": {
+            "name": "Device_7",
+            "r_height": 5,
+            "r_width": 3,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "f5814b8a-1e0b-40c6-9d60-9c23ceca4a23",
+        "fields": {
+            "name": "Device_8",
+            "r_height": 4,
+            "r_width": 4,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "422d6f98-762b-4291-b786-1a4337aa7885",
+        "fields": {
+            "name": "Device_9",
+            "r_height": 5,
+            "r_width": 5,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }, {
+        "model": "devices.device",
+        "pk": "7c080d4f-14f2-4ef5-a1cb-6ac5c47bf1f5",
+        "fields": {
+            "name": "Device_10",
+            "r_height": 3,
+            "r_width": 3,
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }
+]

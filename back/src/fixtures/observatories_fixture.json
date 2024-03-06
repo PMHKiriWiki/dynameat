@@ -1,0 +1,102 @@
+[
+    {
+        "model": "observatories.observatory",
+        "pk": "0f6d13e5-6562-4b9a-8e31-3dc98b75c1a6",
+        "fields": {
+            "name": "Observatory_1",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "b8a4ac31-f36f-4879-8db0-8ac104d7b1c5",
+        "fields": {
+            "name": "Observatory_2",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "27f47c9f-83da-4f8a-9ba3-aa5e5c7a0f4d",
+        "fields": {
+            "name": "Observatory_3",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "85d0a11a-2b04-4e77-8c2d-96a0f3f428bb",
+        "fields": {
+            "name": "Observatory_4",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "c9329e38-56f5-4e0b-83d3-4ee13e944ff3",
+        "fields": {
+            "name": "Observatory_5",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "3fe6dd78-4993-49e5-8e5f-23e1d3c8762a",
+        "fields": {
+            "name": "Observatory_6",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "db5c048a-dcc9-4cf9-9234-9d0a3de238bf",
+        "fields": {
+            "name": "Observatory_7",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "719583c1-0568-4aa5-87b3-5c05c8d0fb9e",
+        "fields": {
+            "name": "Observatory_8",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "cf39ef12-bdf9-4cd5-bf14-4a95a768d165",
+        "fields": {
+            "name": "Observatory_9",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "4e07ac45-5523-4870-a2ea-c9f6c887f215",
+        "fields": {
+            "name": "Observatory_10",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "observatories.observatory",
+        "pk": "a9e6f9e1-c732-4d52-9aa6-28fb8ebf8c8a",
+        "fields": {
+            "name": "Observatory_11",
+            "creation_datetime": "2022-03-06T12:00:00Z",
+            "modification_datetime": "2022-03-06T12:00:00Z"
+        }
+    }
+    
+]
