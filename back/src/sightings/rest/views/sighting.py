@@ -9,8 +9,7 @@ from rest_framework import status
 from services.csv_service import process_csv
 
 from ...models.sighting import Sighting
-from ..serializers import SightingSerializer, CSVUploadSerializer
-
+from ..serializers import SightingSerializer
 
 logger = logging.getLogger(__name__)
 
