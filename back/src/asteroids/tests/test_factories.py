@@ -1,6 +1,5 @@
 from django.test import TestCase
-
-from ..factories.asteroid import AsteroidFactory
+from ..factories import AsteroidFactory
 
 
 class AsteroidFactoryTests(TestCase):

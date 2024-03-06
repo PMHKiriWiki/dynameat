@@ -1,6 +1,5 @@
 from django.test import TestCase
-
-from ..factories.device import DeviceFactory
+from ..factories import DeviceFactory
 
 
 class DeviceFactoryTests(TestCase):

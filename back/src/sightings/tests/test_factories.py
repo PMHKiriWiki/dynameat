@@ -1,6 +1,5 @@
 from django.test import TestCase
-
-from ..factories.sighting import SightingFactory
+from ..factories import SightingFactory
 
 
 class SightingFactoryTests(TestCase):
