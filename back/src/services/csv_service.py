@@ -25,19 +25,12 @@ def _validate_sighting_data(sighting):
 
 def _create_sighting_instance(sighting):
     device_matrix = sighting['device_matrix']
-    logger.info(device_matrix)
     datetime = sighting['datetime']
-    logger.info(datetime)
     device_resolution = sighting['device_resolution']
-    logger.info(device_resolution)
     observatory_id = sighting['observatory_code']
-    logger.info(observatory_id)
     device_id = sighting['device_code']
-    logger.info(device_id)
-    
+
     device_resolution_width, device_resolution_height = map(int, device_resolution.split('x'))
-    logger.info(device_resolution_width)
-    logger.info(device_resolution_height)
     
     asteroid = detect_asteroid(device_matrix, device_resolution_width, device_resolution_height)
 
