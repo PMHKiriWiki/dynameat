@@ -20,9 +20,6 @@ shell:
 logs:
 	docker logs -f ${COMPOSE_PROJECT_NAME}_django
 
-frontlogs:
-	docker logs -f ${COMPOSE_PROJECT_NAME}_vue
-
 createsuperuser:
 	docker exec -it ${COMPOSE_PROJECT_NAME}_django ${MANAGE_CMD} createsuperuser
 
@@ -35,8 +32,8 @@ migrate:
 djangoshell:
 	docker exec -it ${COMPOSE_PROJECT_NAME}_django ${MANAGE_CMD} shell
 
-restart-nextjs:
-	docker restart -it ${COMPOSE_PROJECT_NAME}_nextjs
-
 restart-django:
-	docker restart -it ${COMPOSE_PROJECT_NAME}_nextjs
+	docker restart -it ${COMPOSE_PROJECT_NAME}_django
+
+run-tests:
+	docker exec -it ${COMPOSE_PROJECT_NAME}_django ${MANAGE_CMD} test
