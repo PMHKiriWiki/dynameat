@@ -41,7 +41,7 @@
     },
     props: {
       asteroidId: {
-        type: Number,
+        type: String,
         default: null
       }
     },

@@ -1,4 +1,5 @@
 <template>
+    <Notification :message="notificationMessage" :isSuccess="notificationSuccess" :isError="notificationError" @clear-message="clearMessage" />
     <div>
         <h2>Asteroides</h2>
         <table class="table">
@@ -35,16 +36,22 @@
 import MatrixGrid from './MatrixGrid.vue'
 import AsteroidModal from './AsteroidModal.vue'
 import { fetchAsteroids, deleteAsteroid } from '@/api/apiService'
+import Notification from './Notification.vue'
+
 export default {
     components: {
         MatrixGrid,
-        AsteroidModal
+        AsteroidModal,
+        Notification
     },
     data() {
         return {
             data: [],
             isModalOpen: false,
             selectedItem: null,
+            notificationMessage: '',
+            notificationSuccess: false,
+            notificationError: false,
         }
     },
     mounted() {
@@ -56,6 +63,9 @@ export default {
                 this.data = await fetchAsteroids()
             } catch (error) {
                 console.error('Error fetching data:', error)
+                this.notificationMessage = 'Ha ocurrido un problema al cargar los asteroides'
+                this.notificationSuccess = false
+                this.notificationError = true
             }
         },
         openModal(item) {
@@ -68,11 +78,20 @@ export default {
         },
         async deleteItem(itemId) {
             try {
-                await deleteAsteroid(itemId);
+                await deleteAsteroid(itemId)
                 this.fetchData()
+                this.notificationMessage = 'Asteroide eliminado con éxito'
+                this.notificationSuccess = true
+                this.notificationError = false
+
             } catch (error) {
                 console.error('Error deleting item:', error)
             }
+        },
+        clearMessage() {
+            this.notificationMessage = ''
+            this.notificationError = false
+            this.notificationSuccess = false
         }
     }
 }

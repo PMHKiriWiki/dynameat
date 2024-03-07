@@ -1,10 +1,11 @@
 <template>
   <div class="modal" @click="closeModal">
-    <div class="modal-content" :style="{ width: modalWidth + 'px', height: modalHeight + 'px'} " @click.stop>
+    <Notification :message="notificationMessage" :isSuccess="notificationSuccess" :isError="notificationError" @clear-message="clearMessage" />
+    <div class="modal-content" :style="{ width: modalWidth + 'px', height: modalHeight + 'px' }" @click.stop>
       <div class="top-content">
         <h2>Detalle del asteroide: {{ selectedItem.name ? selectedItem.name : 'Desconocido' }} </h2>
         <form @submit.prevent="updateItem">
-          <label for="itemName">Name:</label>
+          <label for="itemName">Nombre del asteroide:</label>
           <input v-model="updatedName" id="itemName" type="text" required />
         </form>
         <div class="in-modal-table">
@@ -12,8 +13,8 @@
         </div>
       </div>
       <div class="buttons-container">
-        <button class="submit-button" type="submit" @click="updateItem">Update</button>
-        <button class="close-button" @click="closeModal">Close</button>
+        <button class="submit-button" type="submit" @click="updateItem">Guardar</button>
+        <button class="close-button" @click="closeModal">Cerrar</button>
       </div>
     </div>
   </div>
@@ -22,12 +23,14 @@
 <script>
 import MatrixGrid from '@/components/MatrixGrid.vue'
 import SightingsTable from './SightingsTable.vue'
+import Notification from './Notification.vue'
 import { updateAsteroid } from '@/api/apiService'
 
 export default {
   components: {
     MatrixGrid,
     SightingsTable,
+    Notification
   },
   props: {
     selectedItem: Object,
@@ -38,6 +41,9 @@ export default {
       modalWidth: 800,
       modalHeight: 800,
       updatedName: '',
+      notificationMessage: '',
+      notificationSuccess: false,
+      notificationError: false,
     }
   },
   methods: {
@@ -52,6 +58,9 @@ export default {
           }
 
           await updateAsteroid(this.selectedItem.id, data)
+          this.notificationMessage = `El asteroide ${this.updatedName} ha sido guardado con éxito`
+          this.notificationSuccess = true
+          this.notificationError = false
           this.fetchData()
           this.closeModal()
         } else {
@@ -60,9 +69,17 @@ export default {
         }
       } catch (error) {
         console.error('Error updating item:', error)
+        this.notificationMessage = 'Ha habido un error al modificar la información del asteroide'
+        this.notificationSuccess = false
+        this.notificationError = true
         this.closeModal()
       }
     },
+    clearMessage() {
+      this.notificationMessage = ''
+      this.notificationError = false
+      this.notificationSuccess = false
+    }
   },
   watch: {
     selectedItem: {

@@ -16,6 +16,7 @@
   
   <script>
   import Notification from './Notification.vue'
+  import { uploadFile } from '@/api/apiService'
   
   export default {
     components: {
@@ -27,7 +28,7 @@
         uploadedFileName: null,
         uploadSuccess: false,
         uploadError: false
-      };
+      }
     },
     computed: {
       notificationMessage() {
@@ -52,8 +53,8 @@
           this.uploadError = false
         } else {
           console.error('No file selected')
-          this.uploadError = true;
-          this.uploadSuccess = false;
+          this.uploadError = true
+          this.uploadSuccess = false
         }
       } catch (error) {
         console.error('Error uploading file:', error)
