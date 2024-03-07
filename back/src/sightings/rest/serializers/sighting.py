@@ -1,4 +1,4 @@
-from commons.rest.fast_serializer import FastSerializer, UUIDField, FloatField, NestedSerializerField, DateTimeField
+from commons.rest.fast_serializer import FastSerializer, UUIDField, CharField, NestedSerializerField, DateTimeField
 
 from asteroids.rest.serializers import AsteroidSerializer
 from devices.rest.serializers import DeviceSerializer
@@ -11,8 +11,8 @@ class SightingSerializer(FastSerializer):
         model = Sighting
 
     id = UUIDField(read_only=True)
-    name = FloatField()
     device = NestedSerializerField(serializer_class=DeviceSerializer)
     asteroid =  NestedSerializerField(serializer_class=AsteroidSerializer)
     observatory = NestedSerializerField(serializer_class=ObservatorySerializer)
+    device_matrix = CharField()
     datetime = DateTimeField()

@@ -12,13 +12,22 @@ services:
       - vol_static:/static
     expose:
       - "8000"
+  front:
+    container_name: ${COMPOSE_PROJECT_NAME}_vue
+    build:
+      context: .
+      dockerfile: front/Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./front:/app
   nginx:
     container_name: ${COMPOSE_PROJECT_NAME}_nginx
     image: nginx:1.21.6
     restart: always
     ports:
       - "${NGINX_EXTERNAL_PORT}:8000"
-      # - "443:443"
     volumes:
       - ./back/src:/src
       - ./nginx:/etc/nginx/conf.d

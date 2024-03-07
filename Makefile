@@ -20,6 +20,9 @@ shell:
 logs:
 	docker logs -f ${COMPOSE_PROJECT_NAME}_django
 
+frontlogs:
+	docker logs -f ${COMPOSE_PROJECT_NAME}_vue
+
 createsuperuser:
 	docker exec -it ${COMPOSE_PROJECT_NAME}_django ${MANAGE_CMD} createsuperuser
 

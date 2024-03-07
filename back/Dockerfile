@@ -1,7 +1,6 @@
 FROM python:3.10.12-slim
 
 RUN ["apt-get", "update"]
-RUN ["apt-get", "install", "-y", "vim"]
 
 COPY ./requirements.pip ./
 RUN pip install -r ./requirements.pip
